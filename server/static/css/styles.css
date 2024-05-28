@@ -1,0 +1,209 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #fff;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 14px;
+    color: #333;
+}
+
+.container {
+    /* max-height: 100vh; */
+    width: 100vw;
+}
+
+nav {
+    background-color: #333;
+    padding: 1% 20%;
+}
+
+/* Style for the form */
+form {
+    display: flex;
+    gap: 10px;
+}
+
+/* Style for the input field */
+input[type="text"] {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc; 
+    width: 20%;
+}
+
+.city {
+    margin-bottom: 30px;
+}
+
+/* Style for the grey button */
+.grey-button {
+    background-color: #a0a0a0; 
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.grey-button:hover {
+    background-color: #808080; 
+}
+
+.box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 2% 20%;
+}
+
+.current-weather {
+    height: 50%;
+    gap: 20px;
+}
+
+.weatherInfo {
+    display: grid;
+    grid-template-rows: 3fr 1fr 3fr; /* Ratio of 3:1:3 for the columns */
+    gap: 20px;
+    height: 60%;
+}
+
+.supplementary {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    grid-template-rows: repeat(3, auto); 
+    gap: 10px; 
+    padding-left: 20px;
+    border-left: solid 1px orangered;
+}
+
+.dateElement {
+    color: orangered;
+}
+
+.tempContainer {
+   display: flex;    
+}
+
+.tempImg {
+    font-size: 100%;
+}
+
+.currentTemp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 300%;
+}
+
+.desc {
+    text-transform: capitalize;
+}
+
+.daily-weather-header {
+    margin-bottom: 50px;
+}
+
+.dailyForeast-items {
+    position: relative;
+    display: grid;
+    grid-template-columns: .8fr 1.2fr 1fr;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.mask {
+    display: none;
+    margin-bottom: 20px;
+}
+
+.wrapper {
+    display: flex;
+}
+
+.min-max {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.max {
+    margin-right: 20px;
+}
+
+.fa-arrow-up-long {
+    color: orangered;
+}
+
+.fa-arrow-down-long {
+    color: aqua;
+}
+
+.fa-chevron-down:hover {
+    cursor: pointer;
+}
+
+.daily-forecast:hover {
+    cursor: pointer;
+}
+
+.parent {
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+grid-template-rows: repeat(6, 1fr);
+grid-column-gap: 5px;
+grid-row-gap: 10px;
+border-left: solid 1px orangered;
+padding-left: 20px;
+}
+
+.div1 { grid-area: 1 / 1 / 2 / 3; }
+.div2 { grid-area: 1 / 3 / 2 / 5; }
+.div3 { grid-area: 2 / 1 / 3 / 3; }
+.div4 { grid-area: 2 / 3 / 3 / 5; }
+.div5 { grid-area: 3 / 1 / 4 / 3; }
+.div6 { grid-area: 3 / 3 / 4 / 5; }
+.div7 { grid-area: 4 / 1 / 5 / 5; }
+.div8 { grid-area: 5 / 1 / 6 / 2; }
+.div9 { grid-area: 5 / 2 / 6 / 3; }
+.div10 { grid-area: 5 / 3 / 6 / 4; }
+.div11 { grid-area: 5 / 4 / 6 / 5; }
+.div12 { grid-area: 6 / 1 / 7 / 2; }
+.div13 { grid-area: 6 / 2 / 7 / 3; }
+.div14 { grid-area: 6 / 3 / 7 / 4; }
+.div15 { grid-area: 6 / 4 / 7 / 5; }
+
+.div7 {
+    color: orangered;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    body {
+        font-size: calc(16px + 0.5vw);
+        .box {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+}
+.current-weather, .daily-weather {
+    grid-column: 1 / -1;
+}
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: calc(16px + 1vw); /* More aggressive scaling for smaller screens */
+    }
+}
+
+@media (max-width: 576px) {
+    body {
+        font-size: calc(16px + 1.5vw); /* Even more aggressive scaling for very small screens */
+    }
+}
